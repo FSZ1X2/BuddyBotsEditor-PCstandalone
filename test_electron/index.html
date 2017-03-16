@@ -150,17 +150,18 @@
         </div>
     <!--</div>-->
     <script src="lib/jquery.min.js"></script>
-    <script>window.$ = window.jQuery = require('jquery');</script>
     <script src="lib/coffee-script.js"></script>
     <script src="lib/console-save.js"></script>
     <script src="vendor/ace/ace.js"></script>
     <script src="src/droplet-full.js"></script>
     <script src="BBtest3.coffee" type="text/coffeescript"></script>
     <script>
-        $('#export').click(function () {
+        $('#export').click(function () { 
             //const remote = require('electron').remote;
             //const BrowserWindow = remote.BrowserWindow;
             //var win = new BrowserWindow({ width: 400, height: 300 });
+            //var ipcRenderer = require('electron').ipcRenderer;
+            //ipcRenderer.send('show-prefs');
 
             //win.loadURL(url.format({
             //    pathname: path.join(__dirname, 'login.html'),
@@ -172,6 +173,7 @@
             //    win = null;
             //});
             //win.show();
+
             var filename = 'console.py'
             var data = localStorage.getItem('text')
 

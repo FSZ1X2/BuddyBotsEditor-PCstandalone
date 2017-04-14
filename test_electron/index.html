@@ -157,6 +157,7 @@
         <div id="droplet-editor-wrapper">
             <div id="droplet-editor">
             </div>
+            <input id="check" type="text" value="correct"/>
         </div>
         <div id="export">
             Export
@@ -178,7 +179,7 @@
                 var data = localStorage.getItem('text')
 
                 //var check = "Incorrect bot structure"
-                if (data != "Incorrect bot structure") {
+                if (document.getElementById('check').value == "Correct") {
                     var deffile = document.getElementById('ainame').value + '.def'
                     var defcon = "entityDef " + document.getElementById('ainame').value + "{\n\"inherit\"		\"bot\"	\n\"author\"		\"" + document.getElementById('username').value + "\"\n\"bot_type\"		\"Script\"\n\"scriptclass\"	\"" + document.getElementById('ainame').value + "\"\n\"ui_name\"		\"" + document.getElementById('ainame').value + "\"\n}"
 

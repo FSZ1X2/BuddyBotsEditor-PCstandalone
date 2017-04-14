@@ -305,8 +305,10 @@ $('#export').on 'click', ->
   check2 = "return botInput\n def Spawn(self,spawnDict):"
   check3 = "  return\n def Restart(self):"
   if content.indexOf(check1)>=0 && content.indexOf(check2)>=0 && content.indexOf(check3)>=0
+     document.getElementById('check').value = "Correct"
      console.log(content);
   else
+     document.getElementById('check').value = "Incorrect"
      alert("Bot structure is not correct Please check guide")
      #localStorage.clear()
      #localStorage.setItem('text',"Incorrect bot structure")
